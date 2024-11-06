@@ -1,0 +1,33 @@
+
+
+<html>
+<head>
+<title>Confirm Method</title>
+<script language="javascript">
+var question="What is 10+10?";
+var answer=20;
+var correct='<img src="correct.jpg">';
+var incorrect='<img src="fb.png">';
+var Response=prompt(question,"0");
+for(count=1;count<3;count++){
+if(Response!=answer){
+if(confirm("Wrong, Press OK for another chance")){
+Response=prompt(question,"0");
+}
+else{
+alert("Better luck next time");
+count=3;
+}
+}
+else{
+alert("Great! You are right");
+count=3;
+}
+}
+var output=(Response==answer) ? correct:incorrect;
+document.write("<br>");
+document.write(output);
+</script>
+</head>
+<body></body>
+</html>
